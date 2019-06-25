@@ -1,7 +1,100 @@
 body {
-  padding-top: 50px;
 }
+div{
+    display: block;
+}
+a{
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+    color:grey;
+}
+.col-sm-4, .col-sm-5, .col-sm-3{
+    display: block;
+    float:left;
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+.navbar-fixed-top{
+    background-color: #f5f5f5;
+}
+
+
+.navbar-header{
+    width:100%;
+    float: left;
+}
+#search{
+    padding-top: 50px;
+}
+#search form{
+    width: 100%;
+}
+#search form .form-control {
+    width: 70%;
+    display: block;
+    float: left;
+}
+
+.btn {
+    padding: 7.5px 12px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+.input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    z-index: 2;
+    margin-left: -1px;
+    background-image: linear-gradient(to bottom,#eeeeee,#dddddd);
+}
+#search .btn-lg {
+    font-size: 15px;
+    line-height: 16px;
+    padding: 10px 35px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.right {
+  float: right;
+}
+.category{
+  background-color: #f5f5f5;
+}
+.category p{
+  text-align: left;
+}
+.category_name{
+    margin:0px;
+    padding:0px;
+    border-bottom: 2px solid #e2e3e5;
+}
+.product-grid{
+    float:left;
+}
+.product-thumb {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+.product-thumb .image img{
+    width: 200px;
+    height: 200px;
+}
+.product_image{
+    width: 500px;
+    height: 500px;
+}
+.btn-success{
+    width: 100%;
+}
+.caption h4{
+    height: 50px;
 }

@@ -7,8 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/starter-template/">
+    <link rel="icon" href="/favicon.ico">
 
     <title>MyShop</title>
 
@@ -24,21 +23,28 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
           <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">MyShop</a>
+              <div class="col-sm-4">
+                  <div id="logo">
+                        <a class="navbar-brand" href="/"><img src="/image/logo.png"/></a>
+                  </div>
+              </div>
+              <div class="col-sm-5">
+                    <div id="search" class="input-group">
+                        <form action="/search" method="POST" role="search">
+                            {{ csrf_field() }}
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="q" placeholder="Пошук">
+                                <input type="submit" value ="Search" class="btn btn-default btn-lg"/>
+                            </div>
+                        </form>
+
+                    </div>
+              </div>
+
+              <div class="col-sm-3">
+                <a class = "login right" href="/login">Login</a>
+              </div>
           </div>
-          <div id="navbar" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-              </ul>
-          </div><!--/.nav-collapse -->
       </div>
   </nav>
 
@@ -46,7 +52,11 @@
 
       <div class="starter-template">
 		<div class="row">
-			<div class="col-md-3">
+
+			<div class="category col-md-3">
+                <div class="category_name">
+                    <span>Категорії</span>
+                </div>
 				@include('categories')
 			</div>
 			<div class="col-md-9">
@@ -58,13 +68,7 @@
     </div><!-- /.container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
   </body>
+
 </html>
